@@ -1,0 +1,26 @@
+{
+  "auth": {
+    "nextjsplayground": {
+      "service": "Cognito",
+      "serviceType": "managed",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": []
+        },
+        "mfaTypes": [],
+        "verificationMechanisms": []
+      }
+    }
+  },
+  "analytics": {
+    "nextjsplaygroundKinesis": {
+      "service": "Kinesis",
+      "providerPlugin": "awscloudformation"
+    }
+  }
+}

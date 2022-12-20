@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "nextjsplayground_identitypool_412d52ee",
+    "allowUnauthenticatedIdentities": true,
+    "authSelections": "identityPoolOnly",
+    "resourceName": "nextjsplayground",
+    "sharedId": "412d52ee",
+    "serviceName": "Cognito",
+    "useDefault": "manual"
+  }
+}
