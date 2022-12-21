@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-// import { Analytics, Auth } from 'aws-amplify'
+import { Analytics, Auth } from 'aws-amplify'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,38 +14,38 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <div>
+      <div>
         <h1>Title</h1>
         <button onClick={recordAnalytics}>Button</button>
       </div>
       <div>
         <h1>Title</h1>
         <button onClick={signUp}>Button</button>
-      </div> */}
+      </div>
     </>
   )
 }
 
-// async function recordAnalytics() {
-//   await Analytics.record({ name: 'albumVisit' });
-// }
+async function recordAnalytics() {
+  await Analytics.record({ name: 'albumVisit' });
+}
 
-// async function signUp() {
-//   try {
-//       const { user } = await Auth.signUp({
-//           'username' : 'username',
-//           'password' : 'username',
-//           attributes: {
-//               'email' : 'username',          // optional
-//               'phone_number' : 'username',   // optional - E.164 number convention
-//               // other custom attributes 
-//           },
-//           autoSignIn: { // optional - enables auto sign in after user is confirmed
-//               enabled: true,
-//           }
-//       });
-//       console.log(user);
-//   } catch (error) {
-//       console.log('error signing up:', error);
-//   }
-// }
+async function signUp() {
+  try {
+      const { user } = await Auth.signUp({
+          'username' : 'username',
+          'password' : 'username',
+          attributes: {
+              'email' : 'username',          // optional
+              'phone_number' : 'username',   // optional - E.164 number convention
+              // other custom attributes 
+          },
+          autoSignIn: { // optional - enables auto sign in after user is confirmed
+              enabled: true,
+          }
+      });
+      console.log(user);
+  } catch (error) {
+      console.log('error signing up:', error);
+  }
+}
